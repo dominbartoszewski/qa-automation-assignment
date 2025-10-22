@@ -5,14 +5,14 @@ from src import config
 
 @pytest.fixture(scope="session")
 def api_client():
-    """Tworzy klienta API do komunikacji z UOS Server."""
+    """Creates an API client to communicate with the UOS Server."""
     base = f"{config.BASE_URL}/{config.SITE_ID}"
     return UOSApiClient(base_url=base, api_key=config.API_KEY, verify_ssl=config.VERIFY_SSL)
 
 
 @pytest.fixture
 def voucher_id(api_client):
-    """Tworzy testowy voucher przed testem i usuwa go po teście."""
+    """Creates a test voucher before the test and deletes it after the test."""
     payload = {
         "count": 1,
         "name": "qa_test_voucher",

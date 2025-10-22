@@ -1,7 +1,7 @@
 import requests
 
 class UOSApiClient:
-    """Klient API do komunikacji z UniFi OS Server (Integration API)."""
+    """API client for communication with UniFi OS Server (Integration API)."""
 
     def __init__(self, base_url, api_key, verify_ssl = False):
         self.base_url = base_url.rstrip('/')

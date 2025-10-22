@@ -1,5 +1,5 @@
 def test_create_and_get_voucher(api_client, voucher_id):
-    """Tworzy voucher i sprawdza, że można go pobrać."""
+    """Creates a voucher and checks that it is downloadable."""
     resp = api_client.get(f"hotspot/vouchers/{voucher_id}")
     assert resp.status_code == 200, f"GET failed: {resp.text}"
     data = resp.json()
@@ -8,7 +8,7 @@ def test_create_and_get_voucher(api_client, voucher_id):
 
 
 def test_delete_voucher(api_client, voucher_id):
-    """Usuwa voucher i sprawdza, że już go nie można pobrać."""
+    """Deletes the voucher and checks that it can no longer be downloaded."""
     delete_resp = api_client.delete(f"hotspot/vouchers/{voucher_id}")
     assert delete_resp.status_code in (200, 204), f"Delete failed: {delete_resp.text}"
 
