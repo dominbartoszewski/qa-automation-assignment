@@ -4,9 +4,9 @@
 
 Set environment variables:
 ```bash
-export UOS_BASE_URL="https://127.0.0.1:11443/proxy/network/integration/v1/sites"
-export UOS_SITE_ID="88f7af54-98f8-306a-a1c7-c9349722b1f6"
-export UOS_API_KEY="hIMqFbTBgX1MA3yBDFEq9YSp1qEGofO3"
+export UOS_BASE_URL="https://<your_local_ip>/proxy/network/integration/v1/sites"
+export UOS_SITE_ID="<your_site_id>"
+export UOS_API_KEY="<your_api_key>"
 export UOS_VERIFY_SSL=false
 ```
 
